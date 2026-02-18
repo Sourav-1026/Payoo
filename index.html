@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,26 +39,39 @@
     <div class="pt-[210px] w-[200px] mx-auto">
       <img src="./assets/Logo-full.png" alt="" />
     </div>
-    <div
-      class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto mt-[32px]"
-    >
-      <div class="card-body">
-        <fieldset class="fieldset">
-          <label class="label text-[#080808] font-medium">Mobile Number</label>
-          <input
-            type="email"
-            class="input text-[#080808] font-light bg-[#F4F5F7] rounded-full"
-            placeholder="Enter your number"
-          />
-          <label class="label text-[#080808] font-medium">4 Digit Pin</label>
-          <input
-            type="password"
-            class="input text-[#080808] font-light bg-[#F4F5F7] rounded-full"
-            placeholder="Enter 4 Digit Pin"
-          />
-          <button class="btn btn-primary mt-4 rounded-full">Login</button>
-        </fieldset>
+
+    <div class="form pt-[32px]">
+      <div
+        class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto rounded-2xl"
+      >
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-neutral font-bold">Mobile Number</label>
+            <input
+              id="input-number"
+              maxlength="11"
+              minlength="11"
+              type="text"
+              class="input text-[#080808] font-light bg-base-200 rounded-full"
+              placeholder="Enter your number"
+            />
+            <br />
+            <label class="label text-neutral font-bold">4 Digit Pin</label>
+            <input
+              id="input-pin"
+              maxlength="4"
+              minlength="4"
+              type="password"
+              class="input text-[#080808] font-light bg-base-200 rounded-full"
+              placeholder="Enter 4 Digit Pin"
+            />
+            <button id="login-btn" class="btn btn-primary mt-4 rounded-full">
+              Login
+            </button>
+          </fieldset>
+        </div>
       </div>
     </div>
+    <script src="./script/script.js"></script>
   </body>
 </html>
