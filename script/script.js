@@ -11,7 +11,7 @@ const loginButton = document
 
     if (number == "01910045570" && pin == "7337") {
       alert("Login Success");
-      window.location.assign("/home.html");
+      window.location.href = "home.html";
     } else {
       alert("Login Failed");
       return;
