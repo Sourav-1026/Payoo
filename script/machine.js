@@ -18,3 +18,15 @@ function setBalance(value) {
   const balanceElement = document.getElementById("balance");
   balanceElement.innerText = value;
 }
+
+// Machine id --> hide all --> show id
+function showOnly(id) {
+  const addMoney = document.getElementById("add-money");
+  const cashOut = document.getElementById("cashout");
+  // console.log(`add money - ${addMoney}, cashout - ${cashOut}`);
+  addMoney.classList.add("hidden");
+  cashOut.classList.add("hidden");
+
+  const selected = document.getElementById(id);
+  selected.classList.remove("hidden");
+}
