@@ -101,7 +101,59 @@
         </button>
       </div>
     </section>
-    <section id="add-money" class="w-11/12 mx-auto py-2"></section>
+    <section id="add-money" class="w-11/12 mx-auto py-2">
+      <h2 class="text-xl font-bold mb-5">Add Money</h2>
+      <div class="card bg-base-100 w-full shadow-2xl rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-neutral font-bold">Select A Bank</label>
+            <select
+              class="select rounded-full w-full bg-base-200 text-neutral/50"
+            >
+              <option disabled selected>Select Bank</option>
+              <option value="DBBL">DBBL</option>
+              <option value="IBBL">IBBL</option>
+              <option value="CB">CITY BANK</option>
+            </select>
+            <br />
+            <label class="label text-neutral font-bold"
+              >Bank Account Number</label
+            >
+            <input
+              id="add-money-number"
+              maxlength="11"
+              minlength="11"
+              type="text"
+              class="input text-[#080808] font-light bg-base-200 rounded-full w-full"
+              placeholder="Enter 11 digit account number"
+            />
+            <br />
+            <label for="" class="label text-neutral font-bold"
+              >Amount to Add</label
+            >
+            <input
+              id="add-money-amount"
+              type="number"
+              class="input text-[#080808] font-light bg-base-200 rounded-full w-full"
+              placeholder="Enter amount to Add"
+            />
+            <br />
+            <label class="label text-neutral font-bold">Pin Number</label>
+            <input
+              id="cashout-pin"
+              maxlength="4"
+              minlength="4"
+              type="password"
+              class="input text-[#080808] font-light bg-base-200 rounded-full w-full"
+              placeholder="Enter 4 Digit Pin"
+            />
+            <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full">
+              Add Money
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
     <section id="cashout" class="w-11/12 mx-auto py-2">
       <h2 class="text-xl font-bold mb-5">Cashout</h2>
       <div class="card bg-base-100 w-full shadow-2xl rounded-2xl">
