@@ -23,6 +23,10 @@ const sendNow = document
     if (pin == "7337") {
       alert(`Send Money Successfull to ${userAccountNumber} at ${new Date()}`);
       setBalance(newBalance);
+      transaction(
+        "Send Money",
+        `BDT ${amount}, To User No ${userAccountNumber},`,
+      );
     } else {
       alert("Invalid Pin");
       return;

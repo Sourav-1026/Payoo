@@ -25,7 +25,10 @@ const wdrawButton = document
       alert("Withdraw Successfull");
       setBalance(newBalance);
 
-      transaction("Cash Out", `BDT ${cashoutAmount}, To ${agentNumber}`);
+      transaction(
+        "Cash Out",
+        `BDT ${cashoutAmount}, To Agent No ${agentNumber}`,
+      );
     } else {
       alert("Invalid Pin");
       return;

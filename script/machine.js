@@ -9,7 +9,6 @@ function getValueInput(id) {
 function getBalance() {
   const balanceElement = document.getElementById("balance");
   const balance = balanceElement.innerText;
-  console.log(Number(balance));
   return Number(balance);
 }
 
@@ -24,11 +23,13 @@ function showOnly(id) {
   const addMoney = document.getElementById("add-money");
   const cashOut = document.getElementById("cashout");
   const sendMoney = document.getElementById("send-money");
+  const payBill = document.getElementById("pay=bill");
   const transactionHistory = document.getElementById("transaction-history");
 
   addMoney.classList.add("hidden");
   cashOut.classList.add("hidden");
   sendMoney.classList.add("hidden");
+  payBill.classList.add("hidden");
   transactionHistory.classList.add("hidden");
 
   const selected = document.getElementById(id);
