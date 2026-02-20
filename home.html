@@ -78,6 +78,7 @@
           <p>Cashout</p>
         </button>
         <button
+          onclick="showOnly('send-money')"
           class="btn flex-col h-full py-4 btn-primary btn-soft rounded-2xl"
         >
           <img src="./assets/opt-3.png" alt="" />
@@ -200,6 +201,47 @@
         </div>
       </div>
     </section>
+    <section id="send-money" class="w-11/12 mx-auto py-2 hidden">
+      <h2 class="text-xl font-bold mb-5">Send Money</h2>
+      <div class="card bg-base-100 w-full shadow-2xl rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-neutral font-bold"
+              >User Account Number</label
+            >
+            <input
+              id="send-money-number"
+              maxlength="11"
+              minlength="11"
+              type="text"
+              class="input text-[#080808] font-light bg-base-200 rounded-full w-full"
+              placeholder="Enter 11 digit number"
+            />
+            <br />
+            <label for="" class="label text-neutral font-bold">Amount</label>
+            <input
+              id="send-money-amount"
+              type="number"
+              class="input text-[#080808] font-light bg-base-200 rounded-full w-full"
+              placeholder="Enter amount to transfer"
+            />
+            <br />
+            <label class="label text-neutral font-bold">Pin Number</label>
+            <input
+              id="send-money-pin"
+              maxlength="4"
+              minlength="4"
+              type="password"
+              class="input text-[#080808] font-light bg-base-200 rounded-full w-full"
+              placeholder="Enter 4 Digit Pin"
+            />
+            <button id="send-now-btn" class="btn btn-primary mt-4 rounded-full">
+              Send Now
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
     <section
       id="transaction-history"
       class="w-11/12 mx-auto py-5 space-y-5 hidden"
@@ -208,6 +250,7 @@
       <div class="" id="history-container"></div>
     </section>
     <script src="./script/machine.js"></script>
+    <script src="./script/sendmoney.js"></script>
     <script src="./script/addmoney.js"></script>
     <script src="./script/cashout.js"></script>
   </body>

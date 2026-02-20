@@ -23,12 +23,29 @@ function setBalance(value) {
 function showOnly(id) {
   const addMoney = document.getElementById("add-money");
   const cashOut = document.getElementById("cashout");
+  const sendMoney = document.getElementById("send-money");
   const transactionHistory = document.getElementById("transaction-history");
 
   addMoney.classList.add("hidden");
   cashOut.classList.add("hidden");
+  sendMoney.classList.add("hidden");
   transactionHistory.classList.add("hidden");
 
   const selected = document.getElementById(id);
   selected.classList.remove("hidden");
+}
+
+// Machine id --> Transaction history --> Specific Id
+function transaction(type, details) {
+  const history = document.getElementById("history-container");
+
+  const newHistory = document.createElement("div");
+
+  newHistory.innerHTML = `
+    <div class="transaction-card p-5 bg-base-100">
+      ${type} Successful — ${details} at ${new Date().toLocaleString()}
+    </div>
+  `;
+
+  history.append(newHistory);
 }

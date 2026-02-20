@@ -25,18 +25,10 @@ const addMoneyButton = document
     if (pin == "7337") {
       alert(`Add Money Successfull from ${bankAccount} at ${new Date()}`);
       setBalance(newBalance);
-
-      const history = document.getElementById("history-container");
-
-      const newHistory = document.createElement("div");
-
-      newHistory.innerHTML = `
-       <div class="transaction-card p-5 bg=base-100">
-          Add Money Successfull from ${bankAccount}, acc-number ${accNumber} at ${new Date()}
-        </div>
-      `;
-
-      history.append(newHistory);
+      transaction(
+        "Add Money",
+        `BDT ${amount}, From ${bankAccount}, ACC No ${accNumber}`,
+      );
     } else {
       alert("Invalid Pin");
       return;
